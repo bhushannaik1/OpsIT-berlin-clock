@@ -1,0 +1,81 @@
+¢15-01-14T21:43:43.025 | est worker | ClasspathStoryFinder | DEBUG  - Searching for stories called berlin-clock.story in [C:\personal\ubs\OpsIT-berlin-clock\build\classes\test, C:\personal\ubs\OpsIT-berlin-clock\build\resources\test, C:\personal\ubs\OpsIT-berlin-clock\build\classes\main] 
+Ö15-01-14T21:43:43.063 | est worker | aviouralTestEmbedder | DEBUG  - Running BehaviouralTestEmbedder with spring_stories [file:/C:/personal/ubs/OpsIT-berlin-clock/build/resources/test/stories/berlin-clock.story] 
+!Processing system properties {}
+ÜUsing controls EmbedderControls[batch=false,skip=false,generateViewAfterStories=true,ignoreFailureInStories=false,ignoreFailureInView=false,verboseFailures=false,verboseFiltering=false,storyTimeoutInSecs=300,threads=1]
+hRunning story file:/C:/personal/ubs/OpsIT-berlin-clock/build/resources/test/stories/berlin-clock.story
+»Story: The Berlin Clock
+(file:/C:/personal/ubs/OpsIT-berlin-clock/build/resources/test/stories/berlin-clock.story)
+Meta:
+@scope interview
+
+Scenario: Midnight
+When the time is 00:00:00
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO
+}Then the clock should look like
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO
+
+Scenario: Middle of the afternoon
+When the time is 13:17:01
+O
+RROO
+RRRO
+YYROOOOOOOO
+YYOO
+zThen the clock should look like
+O
+RROO
+RRRO
+YYROOOOOOOO
+YYOO
+
+Scenario: Just before midnight
+When the time is 23:59:59
+O
+RRRR
+RRRO
+YYRYYRYYRYY
+YYYY
+nThen the clock should look like
+O
+RRRR
+RRRO
+YYRYYRYYRYY
+YYYY
+
+Scenario: Midnight
+When the time is 24:00:00
+Y
+RRRR
+RRRR
+OOOOOOOOOOO
+OOOO
+nThen the clock should look like
+Y
+RRRR
+RRRR
+OOOOOOOOOOO
+OOOO
+
+Scenario: Enevning
+When the time is 17:23:40
+Y
+RRRO
+RROO
+YYRYOOOOOOO
+YYYO
+á
+(BeforeStories)
+
+
+(AfterStories)
+
+Generating reports view to 'C:\personal\ubs\OpsIT-berlin-clock\build\classes\jbehave' using formats '[stats, html, console]' and view properties '{defaultFormats=stats, decorateNonHtml=true, viewDirectory=view, decorated=ftl/jbehave-report-decorated.ftl, reports=ftl/jbehave-reports-with-totals.ftl, maps=ftl/jbehave-maps.ftl, navigator=ftl/jbehave-navigator.ftl, views=ftl/jbehave-views.ftl, nonDecorated=ftl/jbehave-report-non-decorated.ftl}'
+hReports view generated with 1 stories (of which 0 pending) containing 5 scenarios (of which 0 pending)
